@@ -1,8 +1,8 @@
 {
   "name": "@alanelipschutz/intro-storybook-react-template",
   "version": "0.1.0",
-  "description": "Starter template to get up and running quickly with React and Storybook",
-  "author": "Chromatic <https://chromatic.com/>",
+  "description": "my first story book",
+  "author": "alanelipschutz",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chromaui/intro-storybook-react-template.git"
@@ -11,7 +11,7 @@
     "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
   },
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
