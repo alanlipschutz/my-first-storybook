@@ -1,7 +1,7 @@
 import React from "react";
-import "./style.css";
 import PropTypes from "prop-types";
 import { SvgIcon } from "@mui/material";
+import './style.css'
 
 export default function MyButton({
   content,

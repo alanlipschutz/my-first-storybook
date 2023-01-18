@@ -1,7 +1,6 @@
 import MyButton from "./MyButton";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
-import "./style.css";
 const ICONS = {
   time: AccessAlarmIcon,
   unit: AcUnitIcon,
