@@ -86,7 +86,6 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.7",
     "@storybook/testing-library": "^0.0.11",
-    "auto": "^10.37.6",
     "babel-plugin-named-exports-order": "^0.0.2",
     "cross-env": "^7.0.3",
     "msw": "^0.42.0",
