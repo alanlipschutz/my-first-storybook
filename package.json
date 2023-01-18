@@ -1,11 +1,11 @@
 {
-  "name": "intro-storybook-react-template",
+  "name": "@alanelipschutz/intro-storybook-react-template",
   "version": "0.1.0",
   "description": "Starter template to get up and running quickly with React and Storybook",
   "author": "Chromatic <https://chromatic.com/>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chromaui/intro-storybook-react-template"
+    "url": "git+https://github.com/chromaui/intro-storybook-react-template.git"
   },
   "bugs": {
     "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
@@ -13,6 +13,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -23,12 +27,22 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "init-msw": "msw init public/"
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +73,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@storybook/addon-a11y": "^6.5.15",
     "@storybook/addon-actions": "^6.5.7",
     "@storybook/addon-essentials": "^6.5.7",
     "@storybook/addon-interactions": "^6.5.7",
@@ -70,10 +86,14 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.7",
     "@storybook/testing-library": "^0.0.11",
+    "auto": "^10.37.6",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "cross-env": "^7.0.3",
     "msw": "^0.42.0",
     "msw-storybook-addon": "^1.6.3",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
-  }
+  },
+  "homepage": "https://github.com/chromaui/intro-storybook-react-template#readme",
+  "main": "dist/index.js"
 }

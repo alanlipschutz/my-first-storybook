@@ -1,0 +1,47 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  gap: 8px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button-m {
+  padding: 5px 12px;
+  gap: 5px;
+}
+
+.button-s {
+  padding: 3px 12px;
+  gap: 3px;
+}
+
+.button .button-content-m {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button .button-content-s {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
