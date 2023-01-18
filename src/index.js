@@ -1,4 +1,4 @@
 import MyButton from "./stories/MyButton";
-import "./stories/style.css";
+import './style.css'
 
 export { MyButton };
