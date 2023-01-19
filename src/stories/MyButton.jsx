@@ -3,60 +3,50 @@ import PropTypes from "prop-types";
 import { SvgIcon } from "@mui/material";
 import styled from "styled-components";
 
-export default function MyButton({
-  content,
-  icon,
-  size = "m",
-  disabled = false,
-  backgroundColor = "white",
-  backgroundDisabled = "rgba(87, 96, 121, 0.6)",
-  handleClick,
-  border = "0",
-  colorButton,
-  iconColor = colorButton,
-  iconFontSize = "1rem",
-}) {
-  const Button = styled.button`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 200px;
-    background-color: ${!disabled ? backgroundColor : backgroundDisabled};
-    border: ${!disabled ? border : "0"};
-    cursor: pointer;
-    padding: ${size === "m" ? "5px 12px" : "3px 12px"};
-    border-radius: 4px;
-    gap: ${size === "m" ? "5px" : "3px"};
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  background-color: ${(props) =>
+    !props.disabled ? props.backgroundColor : props.backgroundDisabled};
+  border: ${(props) => (!props.disabled ? props.border : "0")};
+  cursor: pointer;
+  padding: ${(props) => (props.size === "m" ? "5px 12px" : "3px 12px")};
+  border-radius: 4px;
+  gap: ${(props) => (props.size === "m" ? "5px" : "3px")};
 
-    &: disabled {
-      cursor: not-allowed;
-    }
-  `;
+  &: disabled {
+    cursor: not-allowed;
+  }
+`;
 
-  const TextButton = styled.span`
-    font-family: "Source Sans Pro";
-    color: ${!disabled ? colorButton : backgroundDisabled};
-    font-style: normal;
-    font-weight: 600;
-    font-size: ${size === "m" ? "14px" : "12px"};
-    line-height: 20px ${size === "m" ? "20px" : "130%"};
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-  `;
+const TextButton = styled.span`
+  font-family: "Source Sans Pro";
+  color: ${(props) =>
+    !props.disabled ? props.colorButton : props.backgroundDisabled};
+  font-style: normal;
+  font-weight: 600;
+  font-size: ${(props) => (props.size === "m" ? "14px" : "12px")};
+  line-height: ${(props) => (props.size === "m" ? "20px" : "130%")};
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+`;
 
+export default function MyButton(props) {
   const iconStyle = {
-    color: iconColor,
-    fontSize: iconFontSize,
+    color: props.iconColor,
+    fontSize: props.iconFontSize,
   };
 
   return (
-    <Button onClick={handleClick} disabled={disabled}>
-      {icon ? (
-        <SvgIcon style={iconStyle} component={icon} inheritViewBox />
+    <Button {...props} onClick={props.handleClick} disabled={props.disabled}>
+      {props.icon ? (
+        <SvgIcon style={iconStyle} component={props.icon} inheritViewBox />
       ) : null}
-      <TextButton>{content}</TextButton>
+      <TextButton {...props}>{props.content}</TextButton>
     </Button>
   );
 }
