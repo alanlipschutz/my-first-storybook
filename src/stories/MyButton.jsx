@@ -12,7 +12,7 @@ export default function MyButton({
   backgroundDisabled = "rgba(87, 96, 121, 0.6)",
   handleClick,
   border = "0",
-  colorButton = "#151724",
+  colorButton,
   iconColor = colorButton,
   iconFontSize = "1rem",
 }) {
@@ -35,7 +35,7 @@ export default function MyButton({
 
   const TextButton = styled.span`
     font-family: "Source Sans Pro";
-    color: ${!disabled ? colorButton : backgroundDisabled}
+    color: ${!disabled ? colorButton : backgroundDisabled};
     font-style: normal;
     font-weight: 600;
     font-size: ${size === "m" ? "14px" : "12px"};
