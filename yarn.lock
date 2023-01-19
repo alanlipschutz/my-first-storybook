@@ -2202,7 +2202,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-a11y@^6.5.15":
+"@storybook/addon-a11y@^6.5.7":
   "integrity" "sha512-4IgsCU7mrfooyGSgvyQdkZVu2iGJZqZ+2GDDIzzeIs1yXvuRy6QiHYNzesSrgeL52ykDXaPGuzKu2pcMKfDQHA=="
   "resolved" "https://registry.npmjs.org/@storybook/addon-a11y/-/addon-a11y-6.5.15.tgz"
   "version" "6.5.15"
@@ -6318,7 +6318,7 @@
     "schema-utils" "^3.0.0"
     "semver" "^7.3.5"
 
-"css-loader@^6.5.1", "css-loader@^6.7.3":
+"css-loader@^6.5.1":
   "integrity" "sha512-qhOH1KlBMnZP8FzRO6YCH9UHXQhVMcEGLyNdb7Hv2cpcmJbW0YrddO+tG1ab5nT41KpHIYGsbeHqxB9xPu1pKQ=="
   "resolved" "https://registry.npmjs.org/css-loader/-/css-loader-6.7.3.tgz"
   "version" "6.7.3"
