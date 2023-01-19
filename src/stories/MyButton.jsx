@@ -37,8 +37,8 @@ const TextButton = styled.span`
 
 export default function MyButton(props) {
   const iconStyle = {
-    color: props.iconColor,
-    fontSize: props.iconFontSize,
+    color: props.colorButton,
+    fontSize: props.size === "m" ? "16px" : "14px",
   };
 
   return (
@@ -60,6 +60,4 @@ MyButton.propTypes = {
   border: PropTypes.string,
   handleClick: PropTypes.func,
   colorButton: PropTypes.string,
-  iconColor: PropTypes.string,
-  iconFontSize: PropTypes.string,
 };
