@@ -14,4 +14,26 @@ module.exports = {
   features: {
     interactionsDebugger: true,
   },
+  webpackFinal: async (config, { configType }) => {
+    // Add Sass to storybook
+    config.module.rules.push({
+      test: /\.css$/,
+      include: path.resolve(__dirname, "../style"),
+      use: [
+        {
+          loader: "style-loader",
+        },
+        {
+          loader: "css-loader",
+          options: {
+            url: false, // This was the important key ** see explanation
+          },
+        },
+        {
+          loader: "sass-loader",
+        },
+      ],
+    });
+    return config;
+  },
 };
